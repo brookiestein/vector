@@ -7,27 +7,27 @@ int main(int argc, char *argv[])
 {
     printf("Testing functionality...\n\n");
 
-    int_vector_set_debug(true);
+    set_debug(true);
     IntVector numbers;
     int_vector_init(&numbers, 5);
 
-    int_vector_add_int(&numbers, 10);
-    int_vector_add_int(&numbers, 20);
-    int_vector_add_int(&numbers, 30);
-    int_vector_add_int(&numbers, 40);
-    int_vector_add_int(&numbers, 50);
+    int_vector_add(&numbers, 10);
+    int_vector_add(&numbers, 20);
+    int_vector_add(&numbers, 30);
+    int_vector_add(&numbers, 40);
+    int_vector_add(&numbers, 50);
 
     printf("\nVector:\n");
     int_vector_print(&numbers);
     printf("\n");
-    int_vector_add_int(&numbers, 60);
+    int_vector_add(&numbers, 60);
     int_vector_shrink(&numbers);
     printf("\nVector:\n");
     int_vector_print(&numbers);
 
     printf("\n");
     int other_numbers[] = { 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200 };
-    int_vector_add_int_array(&numbers, other_numbers, 14);
+    int_vector_add_array(&numbers, other_numbers, 14);
     printf("\nVector:\n");
     int_vector_print(&numbers);
 
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     IntVector user_test;
     int_vector_init(&user_test, size);
     for (size_t i = 0; i < size; ++i) {
-        int_vector_add_int(&user_test, i + 1);
+        int_vector_add(&user_test, i + 1);
     }
 
     printf("\n\nUser vector:\n\n");

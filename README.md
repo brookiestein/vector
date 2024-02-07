@@ -21,7 +21,7 @@ for (size_t i = 0; i < 5; ++i)
 _After walking the streets of our city_, we realize we need to hold 3 more numbers.
 Do we need to delete that _numbers_ array and/or make another one which would be able to hold 8 ints?
 
-What we need to do is just call int_vector_add_int() 3 more times to add those 3 more numbers, and _the magic_ 
+What we need to do is just call `int_vector_add_int()` 3 more times to add those 3 more numbers, and _the magic_ 
 is done under the hood without needing you to worry about memory allocation.
 ```
 int last = int_vector_get_last(&numbers);
