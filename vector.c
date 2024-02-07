@@ -449,8 +449,8 @@ void string_vector_shrink_items(StringVector *vector)
         char temp[item_size];
 
         // Set an empty character to the whole string for string_vector_strlen(), which is called by string_vector_strcpy(), to work correctly.
-        for (size_t i = 0; i < item_size; ++i) {
-            temp[i] = ' ';
+        for (size_t j = 0; j < item_size; ++j) {
+            temp[j] = ' ';
         }
 
         string_vector_strcpy(vector, vector->data[i], temp, item_size);
